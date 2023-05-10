@@ -1,18 +1,16 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCbAIuwNRRKD7rRFB54vY5Q5ZJ0EqKMTtI",
-  authDomain: "aajl-fausto.firebaseapp.com",
-  projectId: "aajl-fausto",
-  storageBucket: "aajl-fausto.appspot.com",
-  messagingSenderId: "416230555763",
-  appId: "1:416230555763:web:3e54fb3719f65a256b2a06",
+  apiKey: "AIzaSyARiqn2JUg7Boe02J8Iik1V4qMzv78HSnI",
+  authDomain: "jogofausto-5e79a.firebaseapp.com",
+  projectId: "jogofausto-5e79a",
+  storageBucket: "jogofausto-5e79a.appspot.com",
+  messagingSenderId: "201238512934",
+  appId: "1:201238512934:web:9099185d7bf1e51167ade7"
 };
 
 // Initialize Firebase
