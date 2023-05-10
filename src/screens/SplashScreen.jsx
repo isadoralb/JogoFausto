@@ -1,31 +1,17 @@
-import { View } from "react-native";
 import { ActivityIndicator, Text } from "react-native-paper";
-import { styles } from "../utils/styles";
-import { useEffect } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../config/firebase";
+import { View } from "react-native";
 
 export default function SplashScreen({ navigation }) {
-
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        navigation.navigate("TabsNavigation");
-      } else {
-        navigation.navigate("LoginScreen");
-      }
-    });
-
-  }, [])
-
-  // setTimeout(() => {
-  //   navigation.navigate("TabsNavigation");
-  // }, 500);
+  setTimeout(() => {
+    navigation.navigate("TabsNavigation");
+  }, 300);
 
   return (
-    <View style={styles.container}>
-      <ActivityIndicator />
-      <Text>Aguarde um instante...</Text>
+    <View>
+      <ActivityIndicator color="#F28705" />
+      <Text>
+        <h1>Aguarde um instante</h1>
+      </Text>
     </View>
   );
 }

@@ -1,16 +1,39 @@
-import { Image, View } from "react-native";
-import { Text } from "react-native-paper";
-import { styles } from "../utils/styles";
+import { View } from "react-native";
+import { Text, Button } from "react-native-paper";
+import styles from "../utils/styles";
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Image
-        source={{ uri: "https://picsum.photos/300" }}
-        style={{ width: 300, height: 300 }}
-      />
-
-      <Text>Oi eu sou a Home</Text>
+      <Text style={styles.text}>Bem Vindo a Home</Text>
+      <Button
+        style={styles.button}
+        mode="contained"
+        onPress={() => {
+          navigation.navigate("LoginScreen");
+        }}
+      >
+        Login
+      </Button>
+      <Button
+        style={styles.button}
+        mode="contained"
+        onPress={() => {
+          navigation.navigate("CadastrarScreen");
+        }}
+      >
+        Cadastrar
+      </Button>
+      <Button
+        style={styles.button}
+        mode="contained"
+        onPress={() => {
+          navigation.navigate("RecSenhaScreen");
+        }}
+      >
+        Redefinir Senha
+      </Button>
+  
     </View>
   );
 }

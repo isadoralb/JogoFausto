@@ -1,116 +1,99 @@
-import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import FetchNews from "./screens/FetchNews";
+import { NavigationContainer } from "@react-navigation/native";
+import SplashScreen from "./screens/SplashScreen";
 import HomeScreen from "./screens/HomeScreen";
 import LoginScreen from "./screens/LoginScreen";
-import RegisterScreen from "./screens/RegisterScreen";
-import RickMorty from "./screens/RickMorty";
-import SplashScreen from "./screens/SplashScreen";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import RMGameScreen from "./screens/RMGameScreen";
-import Logout from "./screens/LogOut";
-
-const Stack = createNativeStackNavigator();
+import CadastrarScreen from "./screens/CadastrarScreen";
+import RecSenhaScreen from "./screens/RecSenhaScreen";
+import IniciarGameScreen from "./screens/IniciarGameScreen";
+import GameScreen from "./screens/GameScreen";
 
 export default function RootNavigation() {
+  const Tab = createNativeStackNavigator();
+
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
+      <Tab.Navigator>
+        <Tab.Screen
           name="SplashScreen"
           component={SplashScreen}
-          options={{
-            headerShown: false,
-          }}
+          options={{ headerShown: false }}
         />
-        <Stack.Screen
+
+        <Tab.Screen
           name="TabsNavigation"
           component={TabsNavigation}
-          options={{
-            headerShown: false,
-          }}
+          options={{ headerShown: false }}
         />
-      </Stack.Navigator>
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
 
-const Tabs = createMaterialBottomTabNavigator();
+const Tabs = createNativeStackNavigator();
 
 function TabsNavigation() {
   return (
-    <Tabs.Navigator initialRouteName="HomeScreen">
+    <Tabs.Navigator
+      // cardStyle={{backgroundColor:'transparent'}}
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#00305A',
+        },
+
+        headerTitleStyle: {
+          color: '#00305A'
+        },
+
+        headerTintColor: '#fff',
+
+      }}
+    >
       <Tabs.Screen
         name="HomeScreen"
         component={HomeScreen}
         options={{
           tabBarLabel: "Home",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="home" color={color} size={26} />
-          )
+          headerShown: false
         }}
       />
       <Tabs.Screen
         name="LoginScreen"
         component={LoginScreen}
         options={{
-          tabBarLabel: "Login",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="login" color={color} size={26} />
-          )
+          tabBarLabel: "LoginScreen",
         }}
       />
       <Tabs.Screen
-        name="RMGame"
-        component={RMGameScreen}
+        name="CadastrarScreen"
+        component={CadastrarScreen}
         options={{
-          tabBarLabel: "Jogo",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="gamepad-variant" color={color} size={26} />
-          )
+          tabBarLabel: "Cadastrar",
         }}
       />
       <Tabs.Screen
-        name="RegisterScreen"
-        component={RegisterScreen}
-        options={{
-          tabBarLabel: "Registro",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="account-plus" color={color} size={26} />
-          )
-        }}
-      />
-      <Tabs.Screen
-        name="FetchNews"
-        component={FetchNews}
-        options={{
-          tabBarLabel: "Notícias",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="newspaper" color={color} size={26} />
-          )
-        }}
-      />
-      <Tabs.Screen
-        name="RickMorty"
-        component={RickMorty}
-        options={{
-          tabBarLabel: "Rick & Morty",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="alien" color={color} size={26} />
-          )
-        }}
-      />
-      <Tabs.Screen
-        name="Logout"
-        component={Logout}
-        options={{
-          tabBarLabel: "Logout",
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="logout" color={color} size={26} />
-          )
-        }}
-      />
+      name="RecSenhaScreen"
+      component={RecSenhaScreen}
+      options={{
+        tabBarLabel: "RecSenhaScreen",
+      }}
+    />
+    <Tabs.Screen
+      name="IniciarGameScreen"
+      component={IniciarGameScreen}
+      options={{
+        tabBarLabel: "IniciarGameScreen",
+        headerShown: false,
+      }}
+    />
+    <Tabs.Screen
+      name="GameScreen"
+      component={GameScreen}
+      options={{
+        tabBarLabel: "GameScreen",
+        // headerShown: false,
+      }}
+    />
     </Tabs.Navigator>
   );
 }
