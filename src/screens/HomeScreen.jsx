@@ -5,7 +5,7 @@ import styles from "../utils/styles";
 export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Bem Vindo a Home</Text>
+      <Text style={styles.text}>Home</Text>
       <Button
         style={styles.button}
         mode="contained"

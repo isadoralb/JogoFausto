@@ -39,7 +39,7 @@ export default function LoginScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Login</Text>
-      {error && <Text style={styles.text}>{error}</Text>}
+      <Text>{error && <Text style={styles.text}>{error}</Text>}</Text>
       <TextInput
         style={styles.input}
         label="E-mail"

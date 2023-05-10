@@ -5,7 +5,7 @@ const width = Dimensions.get("window").width;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#00305A",
+    backgroundColor: "pink",
     alignItems: "center",
     justifyContent: "center",
     display:'flex',
@@ -24,9 +24,9 @@ const styles = StyleSheet.create({
     padding: 5,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: "#4192D9",
+    backgroundColor: "plum",
     margin: 10,
-    color:'#00305A',
+    color:'orchid',
   },
   button1: {
     display:"flex",
@@ -36,25 +36,25 @@ const styles = StyleSheet.create({
     padding: 5,
     borderRadius: 4,
     elevation: 10,
-    backgroundColor: "#4192D9",
+    backgroundColor: "plum",
     margin: 10,
-    color:'#00305A'
+    color:'orchid'
   },
 
   text: {
-    fontSize: 16,
+    fontSize: 30,
     letterSpacing: 0.25,
-    color: "white",
+    color: "purple",
   },
 
   input: {
-    color: "white",
+    color: "pink",
     height: 50,
     width: '80%',
     margin: 12,
     padding: 20,
     borderBottomWidth: 2,
-    borderBottomColor: "#4192D9",
+    borderBottomColor: "plum",
     borderRadius:7,
   },
 
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     width: "100%",
     borderRadius: 20,
     padding: 20,
-    backgroundColor: "#eeeee4",
+    backgroundColor: "pink",
     shadowColor: "rgba(0, 0, 0, 0.05)",
     shadowOffset: {
       width: 0,
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
 
   container2: {
     flex: 1,
-    backgroundColor: "#00305A",
+    backgroundColor: "pink",
     alignItems: "center",
     justifyContent: "space-around",
     // marginTop:-10,
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   },
 
   pontos: {
-    color: 'white',
+    color: 'deeppink',
     fontSize: 30,
   },
 
