@@ -42,19 +42,38 @@ export default function GameScreen({ navigation }) {
 
   const questions = [
     {
-      pergunta: "Nezuko morre?",
-      resposta1: "Não",
-      resposta2: "Sim",
-      img: "nezuco-morre.jpg",
+      pergunta: "Discórdia é um vilão?",
+      resposta1: "Sim",
+      resposta2: "Não",
+      img: "discordia.png",
       id: 1,
     },
     {
-      pergunta: "Quantos Onis Tanjiro matou?",
+      pergunta: "Quantas poneis fazem parte do grupo original?",
       resposta1: 4,
-      resposta2: 10,
-      img: "tanjiro.png",
+      resposta2: 6,
+      img: "mylittlepony.png",
       id: 2,
     },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     {
       pergunta: "Qual o objetivo de Demon Slayer?",
       resposta1: "Achar a cura para salvar a Nezuko",
